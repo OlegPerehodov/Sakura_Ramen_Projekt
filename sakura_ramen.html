@@ -1,0 +1,871 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Economica:ital,wght@0,400;0,700;1,400;1,700&family=Raleway:ital,wght@0,100..900;1,100..900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Economica:ital,wght@0,400;0,700;1,400;1,700&family=Raleway:ital,wght@0,100..900;1,100..900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+    <title>Oleg's Sakura</title>
+    <link rel="icon" href="img/flower.png" type="image/png">
+    <style>
+        body {
+            scroll-behavior: smooth;
+            margin: 0px;
+            font-family: "Raleway", sans-serif;
+        }
+        header {
+            background-image: url('./img/hero_bg.jpg'); 
+            height: 100vh;
+            object-fit: cover;
+            background-size: cover;
+            background-position: center;                                 
+        }
+        .flower-image {
+            width: 64px;
+            height: 64px;
+            
+            
+        }
+        .phone-image {
+            width: 24px;
+            height: 24px;
+            object-fit: cover;    
+            background-position: cover;
+
+        } 
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items:center;
+            font-size: 24px;
+            padding:40px;  
+            margin-left: 80px;
+            margin-right: 80px;
+            color: white;  
+            text-align:center;
+            background-position: center; 
+             
+        }  
+        .hover-menu {
+            margin-right: 68px;;
+        }
+        .menu-a {
+            display: flex;
+            align-items: center;
+            
+        }      
+        a {   
+            color: white;
+            text-decoration: none;
+            margin-left: 68px;
+            display: flex;
+            align-items: center; 
+
+        } 
+        .hover-menu:hover {
+            text-decoration: underline;
+            color: rgba(194, 29, 29, 0.769);
+
+        } 
+        .button {
+            background-color: rgba(194, 29, 29, 0.769);
+            padding: 8px;
+            border: 2px;
+            border-color:white;
+            border-style:solid;
+            border-radius: 14px;
+            text-align: center;
+            margin-right: 10px;
+            
+        }
+        .button:hover {
+            background-color: rgba(231, 11, 11, 0.873);
+        }
+        h1 {
+            font-size: 96px;
+            margin: 0px;
+            text-align: center;
+        }
+        .headline {
+            margin-top: 160px;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+        }
+        .headline-2 {
+            font-size: 24px;
+            margin:0px;
+        }
+        
+        h2 {
+            font-size: 80px;
+            color: #9F0908;
+            display: flex; 
+            justify-content: center;
+            text-align: center;
+            margin: 0;
+        }
+        .how-to-order-container img {
+            background-position: center;
+            background-size: cover;   
+
+        }
+        .how-to-order-container {
+            padding-top: 120px;
+            padding-bottom: 120px;
+        
+        }
+        .how-to-order-container-2 {
+            margin-top: 64px;
+            display: flex;
+            justify-content: space-evenly;
+
+        }
+        .how-to-order-images {
+            width: 128px;
+            height: 128px;
+            margin-bottom: 16px;
+        }
+        h3 {
+            font-size: 56px;
+            font-family: Economica;
+            font-weight: bold;
+            margin:0px;
+            
+        }
+        .margin-h3 {
+            margin:0px;
+        }
+        .pick-your {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            align-items: center;
+            gap:16px;
+            margin-top: 0px;       
+        }
+        .our-menu-container {
+            background-image: url('./img/section_our_menu_bg.jpg');
+        }
+        .menu {
+            padding-top: 120px;
+            padding-bottom: 80px;
+            margin: 0px;
+            
+        }
+        .menu-images {
+            width: 352px;
+            height: 352px; 
+            object-fit: cover;
+            
+        }
+        .menu-container {
+            margin-left: 160px;
+            margin-right: 160px;  
+            padding-bottom: 120px;  
+        }
+        td {
+            font-size: 32px;
+            font-family:"raleway" sans-serif;
+            font-weight: bold;
+            color: #675E54;
+            
+
+        }
+        .R1-container {
+            display: flex;
+            align-items: center;
+            gap: 80px; 
+            margin-bottom: 56px;  
+        }
+        .R2-container {
+            display: flex;
+            align-items: center;
+            flex-direction: row-reverse;
+            gap: 80px;
+            margin-bottom: 56px; 
+        }
+         .R3-container {
+            display: flex;
+            align-items: center;
+            gap: 80px;   
+        }
+        .map-marker {
+            height:24px;
+            width: 24px;
+        }
+        .map-marker-text {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .adress-container {
+            margin-top:120px;
+        }
+        .google-maps {
+            height: 600px;
+            width: 100%;
+            border: 0;
+            margin-top:64px;
+        }
+        p {
+            text-align: center;
+        }
+        footer { 
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #0A141E;
+            height: 144px;
+            padding-right: 160px;
+            padding-left: 160px;
+        }
+        .footer-links {
+            display: flex;
+        }
+        .footer-logos {
+            height: 40px;
+            width: 40px;
+            margin-left: 24px;
+        }
+        .flower-image-mobile {
+            height: 40px;
+            width: 40px;
+            display: none;
+        }
+
+        @media (max-width:1280px){
+            .hover-menu {
+                display: none;
+            }
+            .headline {
+                text-align: center;
+                margin-top: 80px;
+                
+            }
+            h3 {
+                font-size: 49px;
+
+            }
+            td {
+                font-size: 28px;
+
+            }
+            .menu-container {
+                margin-left: 10px;
+                margin-right: 10px ;
+            }
+            footer {
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+            .footer-links {
+                margin: 0px;
+            }
+            }
+
+
+    
+
+
+
+        @media (max-width: 880px) {
+            .menu-container {
+              margin-left: 20px;
+              margin-right: 20px;
+            }
+            h3 {
+                font-size: 32px;
+            }
+            td {
+                font-size: 24px;
+            }
+
+        
+        }
+
+
+
+        @media (max-width:768px){
+            .hover-menu {
+                display:none;
+                
+            }
+            nav {
+                margin-left:40px
+                
+
+                  
+            }
+            .menu-a {
+                margin:0px;
+
+            }
+             
+                
+            .button {
+                font-size: 76px;
+        
+            }
+            
+            .headline-2 {
+                font-size: 20px;  
+            }
+            .how-to-order-container {
+                padding-top: 96px;
+                padding-bottom: 96px;
+            }
+            .how-to-order-container-2 {
+                margin-top: 48px;
+            }
+            .how-to-order-images {
+                margin-bottom: 8px;
+                height: 112px;
+                width: 112px;
+            }
+            h2 {
+                font-size: 40px;
+            }
+            .menu {
+                padding-top: 96px;
+            }
+            h3 {
+                font-size: 26px;
+                margin-bottom: 16px;
+            }
+            td {
+                font-size:24px;
+                
+            }
+            .R1-container {  
+                display: flex;
+                justify-content: end;
+                margin-bottom: 32px;
+                gap:44px;
+                
+            }
+            .R2-container {
+                margin-bottom: 32px;
+                gap: 44px;
+            }
+            .R3-container {
+                display: flex;
+                justify-content: end;
+                gap:44px
+            }
+            .menu-container { 
+                
+                margin-left: 20px;
+                margin-right: 20px;
+     
+            }
+            footer {
+                padding-right: 20px;
+                padding-left: 20px;
+                
+            }
+            .footer-links {     
+                margin-left: 24px;
+            }
+                 
+        
+            .button {
+                font-size: 20px;
+                margin: 0px;
+        
+            }
+            h1 {
+                font-size: 58px;
+            }
+            .headline-2 {
+                font-size: 20px;  
+            }
+            .how-to-order-container {
+                padding-top: 96px;
+                padding-bottom: 96px;
+            }
+            .how-to-order-container-2 {
+                margin-top: 48px;
+            }
+            .how-to-order-images {
+                margin-bottom: 8px;
+                height: 112px;
+                width: 112px;
+            }
+            
+            .menu {
+                padding-top: 96px;
+            }  
+            .menu-images {
+                width: 260px;
+                height: 260px;
+            }   
+            .R1-container {  
+                display: flex;
+                flex-direction: column;
+                justify-content: end;
+                margin-bottom: 32px;
+                gap:44px;
+                
+            }
+            .R2-container {
+                display: flex;
+                flex-direction: column;
+                margin-bottom: 32px;
+                gap: 44px;
+            }
+            .R3-container {
+                display: flex;
+                flex-direction: column;
+                justify-content: end;
+                gap:44px
+            }
+            footer {
+                padding-right: 32px;
+                padding-left: 32px;
+                
+            }
+            .footer-links {
+                margin-left: 12px;
+            }
+            .footer-none {
+                display: none;
+            }
+            .flower-image-mobile {
+                display: block;
+            }
+        }
+                 
+        
+              
+
+                     @media (max-width:320px){
+            .hover-menu {
+                display: none;
+            }  
+            .flower-image {
+                height: 40px;
+                width: 40px;
+            }  
+            nav {
+                margin-left: 20px;
+            }    
+                       
+             .button {    
+                font-size: 16px;   
+                padding-right: 16px;
+                padding-left:16px;
+                border: 1px;
+                border-style:solid;
+                border-radius: 14px;
+                margin: 0px;
+                
+            
+             }
+             .phone-image {
+                width: 16px;
+                height: 16px;
+             }
+            h1 {
+                font-size: 34px;
+                text-align: center;
+                
+            }
+            .headline-2 {
+                font-size: 12px;  
+            }
+            .how-to-order-container {
+                padding-top: 72px;
+                padding-bottom: 72px;
+            }
+            .how-to-order-container-2 {
+                margin-top: 48px;
+                display: flex;
+                flex-direction: column;
+                gap:32px;
+            }
+            .how-to-order-images {
+                margin-bottom: 8px;
+                height: 112px;
+                width: 112px;
+            }
+            h2 {
+                font-size: 30px;
+            }
+            .menu {
+                padding-top: 72px;
+            }
+            h3 {
+                font-size: 22px;
+                margin-bottom: 16px;
+            }
+            td {
+                font-size: 16px;
+                
+                
+            }  
+            
+            .R1-container {  
+                display: flex;
+                flex-direction: column;
+                margin-bottom: 32px;
+                gap:12px;      
+            }
+            .R2-container {
+                display: flex;
+                flex-direction: column;
+                margin-bottom: 32px;
+                gap: 12px;
+                
+                
+            }
+            .R3-container {
+                display: flex;
+                flex-direction: column;      
+                gap:12px;
+                text-align:left;
+            
+            }
+            .menu-container { 
+                display: flex;
+                flex-direction:column;
+                
+                margin-left: 5px;
+                margin-right: 5px;
+     
+            }
+              .menu-images {
+                width: 180px;
+                height: 180px;
+            }  
+             .footer {
+                height: 86px;
+                padding-right: 16px;
+                padding-left: 16px;
+                display: flex;
+                justify-content:space-between;
+                align-items: center;
+                
+            }
+            .footer-logos {
+                height: 32px;
+                width: 32px;
+            }
+            .footer-links {
+                margin-left: 24px;
+            }
+            .footer-none {
+                display: none;
+                
+            }
+            .flower-image-mobile {
+                display: block;
+            }
+            
+    
+                 
+        } 
+
+
+
+                     @media (max-width:460px){
+            .hover-menu {
+                display: none;
+            }  
+            .flower-image {
+                height: 40px;
+                width: 40px;
+                
+            }      
+            nav {
+               
+                margin-left: 0px;
+                margin-right: 0px;
+                     
+            }
+            .menu-container {
+                margin-left: 10px;
+                margin-right:10px ;
+            }
+             .button {    
+                font-size: 16px;   
+                padding-right: 16px;
+                padding-left:16px;
+                border: 1px;
+                border-style:solid;
+                border-radius: 14px;
+                margin: 0px;
+                
+            
+             }
+             .phone-image {
+                width: 16px;
+                height: 16px;
+             }
+            h1 {
+                font-size: 34px;
+                text-align: center;
+                
+            }
+            .headline-2 {
+                font-size: 12px;  
+            }
+            .how-to-order-container {
+                padding-top: 72px;
+                padding-bottom: 72px;
+            }
+            .how-to-order-container-2 {
+                margin-top: 48px;
+                display: flex;
+                flex-direction: column;
+                gap:32px;
+            }
+            .how-to-order-images {
+                margin-bottom: 8px;
+                height: 112px;
+                width: 112px;
+            }
+              .menu-images {
+                width: 260px;
+                height: 260px;
+            }  
+            h2 {
+                font-size: 40px;
+            }
+            .menu-images {
+                width: 260px;
+                height: 260px;
+                object-fit: cover;
+            }
+            .menu {
+                padding-top: 72px;
+            }
+            h3 {
+                font-size: 26px;
+                margin-bottom: 16px;
+            }
+            td {
+                font-size: 16px;
+                
+            }  
+            
+            .R1-container {  
+                display: flex;
+                flex-direction: column;
+                margin-bottom: 32px;
+                gap:12px;      
+            }
+            .R2-container {
+                display: flex;
+                flex-direction: column;
+                margin-bottom: 32px;
+                gap: 12px;
+                
+                
+            }
+            .R3-container {
+                display: flex;
+                flex-direction: column;      
+                gap:12px;
+                text-align:left;
+            
+            }
+            .menu-container { 
+                display: flex;
+                flex-direction:column;
+                margin-left: 20px;
+                margin-right: 20px;
+     
+            }
+            footer {
+                height: 86px;
+                padding-right: 16px;
+                padding-left: 16px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                    
+            }
+            .footer-links {
+                margin-left: 24px;
+                  
+                
+            }
+            .footer-logos {
+                height: 32px;
+                width: 32px; 
+                margin-left: 0px;
+                margin-right: 0px;
+            }
+            .footer-none {
+                display: none;
+                
+            }
+            .flower-image-mobile {
+                display: block;
+            }
+    
+                 
+        }
+              
+    </style>    
+</head>
+<body>
+    <header>
+        <nav>   
+        <img class="flower-image" src="img/flower.png">
+          <div class="menu-a">
+          <a class="hover-menu " href="#menu">MENU</a>
+          <a class="hover-menu" href="#map">LOCATIONS</a>
+          <a class="hover-menu" href="#footer">ABOUT</a>
+          <a class="button" href="tel:0176 54564534"><img class="phone-image" src="img/phone.png">0176 54564534</a>
+         </div>
+         </nav>
+
+        <div class="headline">
+          <h1>SAKURA RAMEN</h1>
+          <P class="headline-2">THE BEST RAMEN IN TOWN</P>
+        </div>
+    </header>
+    <div class="how-to-order-container">
+
+        
+        <h2>HOW TO ORDER</h2>
+        
+
+        <div class="how-to-order-container-2">
+
+            <div class="pick-your">
+              <img class="how-to-order-images" src="img/noodle.png">
+              <h3 class="margin-h3"> Pick your <p class="margin-h3">noodle</p></h3>
+            </div>
+        
+
+        
+            <div class="pick-your">
+              <img class="how-to-order-images" src="img/broth.png   ">
+              <h3 class="margin-h3"> Pick your<p class="margin-h3">broth</p></h3>
+            </div>
+            
+            <div class="pick-your">
+              <img class="how-to-order-images" src="img/egg.png">
+              <h3 class="margin-h3"> Pick your<p class="margin-h3">toppings</p></h3>
+            </div>
+        </div>
+    </div>
+    
+    <div class="our-menu-container" id="menu">
+    
+    <h2 class="menu">OUR MENU</h2>
+
+    <div class="menu-container">
+        <div class="R1-container">
+        <img class="menu-images" src="img/R1.png">
+         <div>
+        <table>
+             <tr>
+            <th><h3>Tonkotsu Ramen</h3></th> 
+            </tr>
+            <tr>
+              <td class="margin-0">CHICKEN</td>
+              <td>11.95€</td>
+            </tr>
+
+            <tr>
+              <td>BEEF</td>
+              <td>12.95€</td>
+            </tr>
+
+            <tr>
+              <td>SHRIMP</td>
+              <td>13.95€</td>
+            </tr>
+        </table>
+        </div>
+        </div>
+
+        <div class="R2-container">
+        <img class="menu-images" src="img/R2.png">
+         <div>
+        <table>
+             <tr>
+            <th><h3>Spicy Miso Ramen</h3></th> 
+            </tr>
+            <tr>
+              <td class="margin-0">CHICKEN</td>
+              <td>11.95€</td>
+            </tr>
+
+            <tr>
+              <td>BEEF</td>
+              <td>12.95€</td>
+            </tr>
+
+            <tr>
+              <td>SHRIMP</td>
+              <td>13.95€</td>
+            </tr>
+        </table>
+        </div> 
+        </div>
+
+        <div class="R3-container">
+        <img class="menu-images" src="img/R3.png">
+         <div>
+        <table>
+             <tr>
+            <th><h3>SHIO RAMEN</h3></th> 
+            </tr>
+            <tr>
+              <td class="margin-0">CHICKEN</td>
+              <td>11.95€</td>
+            </tr>
+
+            <tr>
+              <td>BEEF</td>
+              <td>12.95€</td>
+            </tr>
+
+            <tr>
+              <td>SHRIMP</td>
+              <td>13.95€</td>
+            </tr>
+        </table>
+        </div>
+        </div>
+
+    </div>
+
+    </div>
+    <div class="adress-container">
+
+
+        <h2>FIND US AT</h2>
+
+        <div class="map-marker-text"> <img class="map-marker" src="img/map_marker.png"> <p>Kapuzinerstraße 31, München, 80337</p> </div>
+        
+        <iframe class="google-maps" id="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2663.210995698599!2d11.558694776317262!3d48.12545425200521!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x479ddf44cf7e4d5f%3A0x55a7bd29a73e9161!2sKapuzinerstra%C3%9Fe%2031%2C%2080337%20M%C3%BCnchen!5e0!3m2!1sde!2sde!4v1755963597042!5m2!1sde!2sde"  referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+    <footer id="footer">
+       
+        <img class="flower-image-mobile" src="img/flower.jpg">
+        <img class="footer-none" src="img/sakura_ramen_logo_and_text.png" height="44px">  
+            <div class="footer-links"> 
+            <a class="footer-links" href="https://www.tripadvisor.de"> <img class="footer-logos" src="img/tripadvisor_logo.png"> </a>
+            <a class="footer-links" href="https://www.facebook.com"> <img class="footer-logos" src="img/facebook_logo.png"> </a>
+            <a class="footer-links" href="https://www.instagram.com"> <img class="footer-logos" src="img/instagrram_logo.png"> </a>  
+            </div>
+
+    </footer>
+
+    
+    
+</body>
+</html>
